@@ -1,7 +1,8 @@
+#You need to first generate a free API key from https://api.openweathermap.org or from any other api source 
 import requests
 
 def get_weather(city, api_key):
-    base_url = "https://api.openweathermap.org/data/2.5/weather"
+    base_url = "https://api.openweathermap.org/data/2.5/weather" #url from which your are using api key
     params = {
         'q': city,
         'appid': api_key,
@@ -33,7 +34,7 @@ def display_weather(weather):
         print("City not found or API error.")
 
 if __name__ == "__main__":
-    api_key = "bb2f790ba0e26fcad93c50af47bc6ab1"
+    api_key = "#PUT YOUR API KEY HERE"
     city = input("Enter city name: ")
     weather_data = get_weather(city, api_key)
     display_weather(weather_data)
